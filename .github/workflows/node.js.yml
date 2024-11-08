@@ -6,12 +6,11 @@ on:
 
 jobs:
   build:
-    # Cambia 'ubuntu-latest' por 'self-hosted' para usar tu runner auto-hospedado
-    runs-on: self-hosted
+    runs-on: self-hosted  # Utiliza tu runner auto-hospedado en EC2
 
     strategy:
       matrix:
-        node-version: [20.x]  # Versiones de Node recomendadas
+        node-version: [20.x]  # Versión de Node recomendada
 
     steps:
       - uses: actions/checkout@v4
@@ -21,6 +20,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'  # Usa cache para yarn
+
+      - name: Install Yarn
+        run: |
+          npm install -g yarn  # Instala Yarn globalmente
 
       - name: Install dependencies
         run: yarn install
