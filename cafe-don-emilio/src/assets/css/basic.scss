@@ -1,0 +1,144 @@
+/*
+*	ESTE ARCHIVO FUE CREADO PARA INCORPORAR ESTILOS PERSONALIZADOS 
+*	SE DEBEN INCORPORAR REGLAS DE ESTILO BASICAS QUE SEAN FACILES DE REUTILIZAR EN DIFERENTES SITIOS
+*	INDEPENDIENTEMENTE DEL LUGAR
+*/
+
+// PADDING
+.base-padding{
+  padding: 1.5rem !important;
+}
+
+.pt-12rem{
+  padding-top: 12rem !important;
+}
+
+.no-padding{
+  padding: 0%!important;
+  width: 90%;
+  }
+
+.side-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.w-min-content {
+  width: min-content;
+}
+
+.dimension-80px {
+  width: 80px;
+  height: 80px;
+}
+
+.dimension-46px {
+  width: 46px;
+  height: 46px;
+}
+
+
+// ANCHOS
+@media (min-width: $lg-width){
+  .w-lg-50{
+    width: 50% !important;
+  }
+}
+
+// BORDES
+
+.border-1px-primary-imp {
+  border: 1px solid $primary !important;
+}
+
+.border-1px-gray{
+  border: 1px solid $gris-strokes;
+}
+.border-gray{
+  border-style: solid;
+  border-color: $gris-strokes;
+}
+.border-t-1px-gray{
+  @extend .border-gray;
+  border-width: 1px 0 0 0;
+}
+.border-r-1px-gray{
+  @extend .border-gray;
+  border-width: 0 1px 0 0;
+}
+@media (min-width: $md-width){
+  .border-r-md-1px-gray{
+    border-width: 0 1px 0 0 !important;
+  }
+}
+.border-b-1px-gray{
+  @extend .border-gray;
+  border-width: 0 0 1px 0;
+}
+.border-l-1px-gray{
+  @extend .border-gray;
+  border-width: 0 0 0 1px;
+}
+
+.hr-base{
+  border-top: 1px solid $gris-strokes-2;
+}
+
+
+// FLEX
+.d-flex-center{
+  display: flex;
+  align-items: center;
+}
+
+.d-flex-center-center {
+  @extend .d-flex-center;
+  justify-content: center;
+}
+
+.flex-1{
+  flex: 1;
+}
+.flex-1-0-auto{
+  flex: 1 0 auto;
+}
+.flex-1-1-auto{
+  flex: 1 1 auto;
+}
+.flex-2{
+  flex: 2;
+}
+.flex-3{
+  flex: 3;
+}
+
+// Z-INDEX
+.z-index-minus-1{
+  z-index: -1;
+}
+.z-index-0{
+  z-index: 0;
+}
+.z-index-1{
+  z-index: 1;
+}
+
+// OVERFLOW
+.overflow-x-hidden{
+  overflow-x: hidden;
+}
+.overflow-y-hidden{
+  overflow-y: hidden;
+}
+
+@media (min-width: $md-width){
+  .overflow-y-md-scroll{
+    overflow-y: scroll;
+  }
+}
+
+.h-dvh-100 {
+  height: 100dvh;
+}
+
+//regla de transparencia de color de fondo al 50%

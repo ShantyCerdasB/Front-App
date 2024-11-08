@@ -1,0 +1,79 @@
+/*
+*	ESTE ARCHIVO FUE CREADO PARA INCORPORAR ESTILOS PERSONALIZADOS 
+*	SE DEBEN INCORPORAR REGLAS DE ESTILO BASICAS SOBRE LOS TEXTOS
+*/
+
+.titulo-1 {
+  font-size: 1.5rem; // 24px
+  line-height: 2.1rem; //33.6px
+}
+
+.titulo-2 {
+  font-size: 0.875rem; // 14px
+  line-height: 1.313rem; //21px
+}
+
+.titulo-3 {
+  font-size: 1rem; // 16px
+  line-height: 1.313rem; //21px
+}
+
+.titulo-4 {
+  font-size: 1.067rem; // 16px
+  line-height: 2.133rem;
+}
+
+.titulo-5 {
+  font-size: 1.523rem; // 22.84px
+  line-height: 3.046rem;
+}
+
+.subtitulo {
+  font-size: 0.933rem; // 14px
+  line-height: 1.133rem;
+}
+
+h2.subtitulo {
+  margin-block-start: 0.83em;
+}
+
+.texto-sm {
+  font-size: 0.667rem; // 10px
+  line-height: 1.333rem;
+}
+
+.texto-sm-1 {
+  font-size: 0.938rem; // 15px
+  line-height: 1.313rem; //21px
+}
+
+.texto-med {
+  font-size: 1rem; // 16px
+  line-height: 1.45rem;
+}
+
+//Dotted line o punteado entre ambos span
+.dotted-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dotted-line::before {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 1px dotted grey;
+  margin: 0 10px; 
+}
+
+.product-span:first-child {
+  margin-right: 10px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.product-span:last-child {
+  margin-left: 10px; 
+}
+
