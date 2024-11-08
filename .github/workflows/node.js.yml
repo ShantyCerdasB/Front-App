@@ -6,7 +6,8 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Cambia 'ubuntu-latest' por 'self-hosted' para usar tu runner auto-hospedado
+    runs-on: self-hosted
 
     strategy:
       matrix:
