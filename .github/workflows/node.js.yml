@@ -1,26 +1,25 @@
-name: Node.js CI
+name: Node.js CI  # Nombre del flujo de trabajo
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ]  # Ejecuta la acción cuando hay push a la rama "main"
 
 jobs:
   build:
-   runs-on: ubuntu-latest
-
+    runs-on: ubuntu-latest  # Sistema operativo de ejecución
 
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [20.x]  # Versión de Node.js que usará el flujo de trabajo
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4  # Descarga el código del repositorio
 
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
+          cache: 'yarn'  # Usa caché para Yarn
 
       - name: Clean Yarn cache
         run: yarn cache clean  # Limpiar la caché de Yarn
@@ -35,7 +34,7 @@ jobs:
           npm install -g yarn  # Instala Yarn globalmente
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install  # Instala las dependencias del proyecto
 
       - name: Build the project
-        run: yarn build
+        run: yarn build  # Compila o construye el proyecto
