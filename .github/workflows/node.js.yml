@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted  # Utiliza tu runner auto-hospedado en EC2
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
