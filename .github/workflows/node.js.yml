@@ -21,8 +21,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'  # Usa cache para yarn
 
+      - name: Change directory to Front-App
+        working-directory: Front-App
+
       - name: Install dependencies
+        working-directory: Front-App
         run: yarn install
 
       - name: Build the project
-        run: yarn build  # Asegúrate de que este script existe en package.json
+        working-directory: Front-App
+        run: yarn build  
